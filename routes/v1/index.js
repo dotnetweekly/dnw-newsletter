@@ -5,5 +5,6 @@ const NewsletterController = require('../../controllers/newsletter.newsletters.c
 const newsletterController = new NewsletterController();
 
 router.post('/newsletters/current', newsletterController.currentNewsletter);
+router.get('/user/activate', newsletterController.userActivate);
 
 module.exports = router;

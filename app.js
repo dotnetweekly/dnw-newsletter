@@ -19,7 +19,7 @@ function allowCrossDomain(req, res, next) {
 	res.setHeader('Access-Control-Allow-Headers', 'content-type, Authorization');
 
 	if (req.method === 'OPTIONS') {
-		res.send(200);
+		res.sendStatus(200);
 	} else {
 		next();
 	}
@@ -38,6 +38,7 @@ app.use(function(req, res, next) {
 });
 
 app.use(function(err, req, res, next) {
+	console.log(err);
 	res.status(err.status || 500).send({
 		success: false,
 		message: err.message
