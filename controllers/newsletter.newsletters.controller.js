@@ -22,6 +22,13 @@ class NewslettersController extends AdminBaseController {
 			this._userHandler.activate(req, response);
 		}
 	}
+	
+	updateEmail(req, res, next) {
+		const response = this._responseManager.getResponseHandler(req, res, true);
+		if (response) {
+			this._userHandler.updateEmail(req, response);
+		}
+	}
 }
 
 module.exports = NewslettersController;
