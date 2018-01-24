@@ -26,7 +26,7 @@ class Newsletter {
 
 		for (var i = 0; i < this.links.length; i++) {
 			linkBlocks.push(new Link(this.links[i]));
-			if (i == 1) {
+			/* if (i == 1) {
 				linkBlocks.push(new AdPremium());
 			}
 			if (i == 4) {
@@ -37,7 +37,7 @@ class Newsletter {
 			}
 			if (i == 8) {
 				linkBlocks.push(new AdJobListing());
-			}
+			} */
 		}
 		return generator.generate(
 			[ new Header(), new NewsletterHeader(week, year) ].concat(linkBlocks).concat([ new Footer() ])

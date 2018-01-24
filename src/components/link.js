@@ -40,7 +40,7 @@ class Link {
       case "articles":
         imageUrl += "article.png";
         break;
-      case "book":
+      case "books":
         imageUrl += "book.png";
         break;
       case "events-training":
