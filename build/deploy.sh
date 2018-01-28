@@ -1,4 +1,3 @@
-cp -a ./. ../wwwroot/
-
-cd ../wwwroot
+cp -a "./." "../wwwroot/"
+cd "../wwwroot"
 npm install
