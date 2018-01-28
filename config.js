@@ -10,7 +10,7 @@ const config = {
 		links: `${apiDomain}links`
 	},
 	auth: {
-		secret: 'secret'
+		secret: process.env.SECRET || 'secret'
 	}
 };
 
