@@ -1,1 +1,1 @@
-cp . ../wwwroot/
+cp -a ./. ../wwwroot/
