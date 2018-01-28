@@ -4,11 +4,11 @@
 	"description": "",
 	"scripts": {
 		"test": "",
-		"start": "node ./bin/www",
+    "start": "node server.js",
 		"build-css": "node-sass --include-path scss styles/styles.scss public/styles.css",
 		"watch-css": "nodemon -e scss -x \"npm run build-css\"",
 		"generate-newsletter": "nodemon actions/generate-newsletter.js",
-		"dev": "npm run watch-css & npm run generate-newsletter & nodemon ./bin/www"
+		"dev": "npm run watch-css & npm run generate-newsletter & nodemon server.js"
 	},
 	"author": "",
 	"license": "MIT",
@@ -23,5 +23,8 @@
 		"express": "^4.16.2",
 		"node-sass": "^4.7.2",
 		"nodemon": "^1.12.5"
-	}
+	},
+  "engines":{
+    "node": "8.9.3"
+  }
 }
