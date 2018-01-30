@@ -1,8 +1,9 @@
 const jwt = require('jsonwebtoken');
+const sanitize = require('mongo-sanitize');
 const config = require('../../config');
 
 const validate = function(req) {
-	let token = req.headers.authorization;
+	let token = sanitize(req.headers.authorization);
 
 	if (!token) {
 		return null;

@@ -1,4 +1,5 @@
 var express = require('express');
+const sanitize = require('mongo-sanitize');
 var path = require('path');
 var bodyParser = require('body-parser');
 
@@ -12,7 +13,7 @@ app.use(bodyParser.json());
 function allowCrossDomain(req, res, next) {
 	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');
 
-	var origin = req.headers.origin;
+	var origin = sanitize(req.headers.origin);
 	if (origin) {
 		res.setHeader('Access-Control-Allow-Origin', origin);
 	}
