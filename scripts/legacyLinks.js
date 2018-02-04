@@ -7,7 +7,7 @@ const recursive = require('recursive-readdir')
 
 const folderIssue = path.resolve(__dirname, `../public/issues/`);
 const includedFilesRegExp = ['(.*?[\\/|\\\\]index\\.html)']
-const newDomain = "https://dnw-newsletter.scm.azurewebsites.net/";
+const newDomain = "https://dnw-newsletter.azurewebsites.net/";
 const oldHost = "www.dotnetweekly.com"
 
 var assetFiles = [];
@@ -97,17 +97,19 @@ function fixWeekNumber(filename, data) {
   var myRe = /https:\/\/dnw-newsletter\.scm\.azurewebsites\.net\/issues\/(.*?)\/(.*?)\/(.*?)/gmi;
   var resourceLinks = newData.match(myRe);
 
-  if (!resourceLinks) {
-    return data;
-  }
+  // if (!resourceLinks) {
+  //   return data;
+  // }
 
-  let found = 0;
+  // let found = 0;
 
-  resourceLinks.forEach(resourceLink => {
-    var linkParts = (/\/issues\/(.*?)\/(.*?)\/(.*?)$/g).exec(resourceLink);
-    var reg1 = new RegExp(`/issues/${linkParts[1]}/${linkParts[2]}/`, "gmi");
-    data = data.replace(reg1, `/issues/${linkParts[1]}/${parseInt(linkParts[2]).toString()}/`)
-  })
+  // resourceLinks.forEach(resourceLink => {
+  //   var linkParts = (/\/issues\/(.*?)\/(.*?)\/(.*?)$/g).exec(resourceLink);
+  //   var reg1 = new RegExp(`/issues/${linkParts[1]}/${linkParts[2]}/`, "gmi");
+  //   data = data.replace(reg1, `/issues/${linkParts[1]}/${parseInt(linkParts[2]).toString()}/`)
+  // })
+
+  data = data.replace(/https:\/\/dnw-newsletter\.scm\.azurewebsites\.net/gmi, "https://dnw-newsletter.azurewebsites.net/");
   
   fs.writeFileSync(filename, data, function(err) {
     if(err) {
