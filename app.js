@@ -1,11 +1,12 @@
-var express = require('express');
+const express = require('express');
 const sanitize = require('mongo-sanitize');
-var path = require('path');
-var bodyParser = require('body-parser');
+const path = require('path');
+const bodyParser = require('body-parser');
 
-var routes = require('./routes');
+const routes = require('./routes');
+const newsletterCache = require('./helpers/newsletters.helper');
 
-var app = express();
+const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -13,7 +14,7 @@ app.use(bodyParser.json());
 function allowCrossDomain(req, res, next) {
 	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');
 
-	var origin = sanitize(req.headers.origin);
+	const origin = sanitize(req.headers.origin);
 	if (origin) {
 		res.setHeader('Access-Control-Allow-Origin', origin);
 	}
@@ -33,17 +34,18 @@ app.use('/api', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-	var err = new Error('Not Found');
+	const err = new Error('Not Found');
 	err.status = 404;
 	next(err);
 });
 
 app.use(function(err, req, res, next) {
-	console.log(err);
 	res.status(err.status || 500).send({
 		success: false,
 		message: err.message
 	});
 });
+
+newsletterCache.refresh();
 
 module.exports = app;

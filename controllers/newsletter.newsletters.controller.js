@@ -9,6 +9,13 @@ class NewslettersController extends AdminBaseController {
     this._userHandler = new UserHandler();
   }
 
+  getNewsletterList(req, res, next) {
+    const response = this._responseManager.getResponseHandler(req, res, true);
+    if (response) {
+      this._newsletterHandler.getNewsletterList(req, response);
+    }
+  }
+
   currentNewsletter(req, res, next) {
     const response = this._responseManager.getResponseHandler(req, res);
     if (response) {
