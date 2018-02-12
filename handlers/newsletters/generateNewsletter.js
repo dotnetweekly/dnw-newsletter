@@ -44,7 +44,9 @@ const generateNewsletter = function(req, callback) {
 			head: `newsletter-${year}-${week}`,
 			base: "master"
 		})
-		.then()
+		.then(() => {
+			callback.onSuccess();
+		})
 	 })
 	 .catch(error => {
 		 console.log(error);
