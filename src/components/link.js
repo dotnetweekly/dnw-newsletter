@@ -14,6 +14,7 @@ class Link {
       path.resolve(__dirname, "../../template/link.html"),
       "utf-8"
     );
+    console.log(this.link);
     linkTmpl = linkTmpl.replace(/(\${linkTitle})/gim, this.link.title);
     linkTmpl = linkTmpl.replace(/(\${linkResource})/gim, this.link.url);
     linkTmpl = linkTmpl.replace(
@@ -31,10 +32,11 @@ class Link {
     linkTmpl = linkTmpl.replace(/(\${username})/gim, this.link.user.username);
     linkTmpl = linkTmpl.replace(
       /(\${linkUrl})/gim,
-      `${config.clientDomain}${this.link.category.slug}/${this.link.slug}`
+      `${config.clientDomain}${this.link.category}/${this.link.slug}`
     );
+    linkTmpl = linkTmpl.replace(/(\${linkTags})/gim, this.link.tags.join(", "));
 
-    const categorySlug = this.link.category.slug;
+    const categorySlug = this.link.category;
     let imageUrl = `${config.newsletterDomain}images/`;
     switch (categorySlug) {
       case "articles":
