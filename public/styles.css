@@ -61,7 +61,7 @@ td {
 .email_body,
 html,
 body {
-  background-color: #fafafa; }
+  background-color: #f5f5f5; }
 
 .email_container,
 .email_row,
@@ -167,7 +167,7 @@ p small {
 p.lead {
   font-size: 19px;
   line-height: 27px;
-  color: #a9b3ba; }
+  color: #616161; }
 
 .small {
   font-size: 14px;
@@ -212,11 +212,11 @@ h6 {
 
 .footer_c .column_cell,
 .footer_c p {
-  color: #a9b3ba; }
+  color: #616161; }
 
 .footer_c a,
 .footer_c a span {
-  color: #a9b3ba;
+  color: #616161;
   text-decoration: underline; }
 
 .content_cell,
@@ -246,7 +246,7 @@ h6 {
 
 .email_body .fsocial {
   line-height: 100%;
-  color: #a9b3ba; }
+  color: #616161; }
 
 .fsocial img {
   max-width: 24px;
@@ -437,7 +437,7 @@ table .tde {
 table .tm,
 a.tm,
 a.tm span {
-  color: #a9b3ba; }
+  color: #616161; }
 
 .td,
 table .td {
@@ -554,10 +554,10 @@ table .nw {
   margin-bottom: 32px; }
 
 .bt {
-  border-top: 1px solid #fafafa; }
+  border-top: 1px solid #f5f5f5; }
 
 .bb {
-  border-bottom: 1px solid #fafafa; }
+  border-bottom: 1px solid #f5f5f5; }
 
 .btw,
 .bt.btw,
