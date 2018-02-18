@@ -1,5 +1,5 @@
 const Header = require('./header');
-const Footer = require('./footer');
+const FooterUnsubscribe = require('./footerUnsubscribe');
 const Link = require('./link');
 const NewsletterHeader = require('./newsletterHeader');
 const AdPremium = require('./adPremium');
@@ -40,7 +40,7 @@ class Newsletter {
 			} */
 		}
 		return generator.generate(
-			[ new Header(), new NewsletterHeader(week, year) ].concat(linkBlocks).concat([ new Footer() ])
+			[ new Header(), new NewsletterHeader(week, year) ].concat(linkBlocks).concat([ new FooterUnsubscribe() ])
 		);
 	}
 }
