@@ -43,6 +43,13 @@ class NewslettersController extends AdminBaseController {
       this._userHandler.forgotPassword(req, response);
     }
   }
+
+  emailTmpl(req, res, next) {
+    const response = this._responseManager.getResponseHandler(req, res, true);
+    if (response) {
+      this._newsletterHandler.emailTmpl(req, response);
+    }
+  }
 }
 
 module.exports = NewslettersController;

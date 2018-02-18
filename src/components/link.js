@@ -14,7 +14,6 @@ class Link {
       path.resolve(__dirname, "../../template/link.html"),
       "utf-8"
     );
-    console.log(this.link);
     linkTmpl = linkTmpl.replace(/(\${linkTitle})/gim, this.link.title);
     linkTmpl = linkTmpl.replace(/(\${linkResource})/gim, this.link.url);
     linkTmpl = linkTmpl.replace(
