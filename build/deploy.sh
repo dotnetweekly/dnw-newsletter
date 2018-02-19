@@ -1,8 +1,1 @@
-
-eval 'ls'
-eval 'cd ../../'
-eval 'ls'
-eval 'cp -R "repository/*" "wwwroot/"'
-eval 'cd "wwwroot"'
-eval 'ls'
-eval 'npm install --only=production'
+cd ../../&& cp -R "repository/*" "wwwroot/"&& cd "wwwroot"&& npm install --only=production
