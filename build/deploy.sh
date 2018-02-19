@@ -1,1 +1,5 @@
-cd ../../&& cp -R "repository/*" "wwwroot/"&& cd "wwwroot"&& npm install --only=production
+#!/bin/bash
+
+cp -R "./*" "../wwwroot/"
+cd "../wwwroot"
+npm install --only=production
