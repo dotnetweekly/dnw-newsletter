@@ -6,14 +6,15 @@ const Generator = require('../generator');
 const generator = new Generator();
 
 class Newsletter {
-	constructor(token) {
-    this.token = token;
+	constructor(token, password) {
+		this.token = token;
+		this.password = password;
 	}
 
 	generate() {
     const token = "";
 		return generator.generate(
-			[ new Header(false), new ActivateAccount(this.token) ].concat([ new Footer() ])
+			[ new Header(false), new ActivateAccount(this.token, this.password) ].concat([ new Footer() ])
 		);
 	}
 }

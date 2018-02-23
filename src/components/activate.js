@@ -2,8 +2,9 @@ const path = require('path');
 const fs = require('fs-extra');
 
 class Activate {
-	constructor(token) {
-    this.token = token;
+	constructor(token, password) {
+		this.token = token;
+		this.password = password;
 	}
 
 	getTmpl() {
@@ -11,7 +12,12 @@ class Activate {
 	}
 	generate(token = "") {
 		let linkTmpl = this.getTmpl();
-    linkTmpl = linkTmpl.replace(/(\${ACTIVATE_TOKEN})/gim, this.token);
+		linkTmpl = linkTmpl.replace(/(\${ACTIVATE_TOKEN})/gim, this.token);
+		if (this.password) {
+			linkTmpl = linkTmpl.replace(/(\${AUTOGEN_PASS})/gim, `Your auto-generated password is ${this.password}`);
+		}else{
+			linkTmpl = linkTmpl.replace(/(\${AUTOGEN_PASS})/gim, "");
+		}
 		return linkTmpl;
 	}
 }
