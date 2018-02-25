@@ -25,7 +25,7 @@ class Newsletter {
 		}
 
 		for (var i = 0; i < this.links.length; i++) {
-			linkBlocks.push(new Link(this.links[i]));
+			linkBlocks.push(new Link(this.links[i], this.week, this.year));
 			/* if (i == 1) {
 				linkBlocks.push(new AdPremium());
 			}

@@ -5,8 +5,10 @@ const dateHelper = require("../../helpers/date.helper");
 const linkHelper = require("../../helpers/link.helper");
 
 class Link {
-  constructor(link) {
+  constructor(link, week, year) {
     this.link = link;
+    this.week = week;
+    this.year = year;
   }
 
   generate() {
@@ -14,8 +16,17 @@ class Link {
       path.resolve(__dirname, "../../template/link.html"),
       "utf-8"
     );
+
+    var utmString = `utm_campaign=dotNET Weekly&utm_medium=email&utm_source=week-${this.week}_year-${this.year}`;
+    let resourceUrl = this.link.url;
+		if(!resourceUrl.includes("?")){
+			resourceUrl += "?" + utmString;
+		}else{
+			resourceUrl += "&" + utmString;
+		}
+
     linkTmpl = linkTmpl.replace(/(\${linkTitle})/gim, this.link.title);
-    linkTmpl = linkTmpl.replace(/(\${linkResource})/gim, this.link.url);
+    linkTmpl = linkTmpl.replace(/(\${linkResource})/gim, resourceUrl);
     linkTmpl = linkTmpl.replace(
       /(\${linkUpvotes})/gim,
       this.link.upvotes.length
