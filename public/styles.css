@@ -138,7 +138,7 @@ body {
 
 .email_body a.td,
 .email_body a.td span {
-  color: #888888; }
+  color: #616161; }
 
 .column_cell,
 .column_cell td,
@@ -153,7 +153,7 @@ p {
 p {
   font-size: 16px;
   line-height: 23px;
-  color: #888888;
+  color: #616161;
   mso-line-height-rule: exactly; }
 
 p {
@@ -253,7 +253,7 @@ h6 {
   height: auto !important; }
 
 .ncard_c {
-  color: #888888;
+  color: #616161;
   overflow: hidden; }
 
 .content_cell .sc,
@@ -441,7 +441,7 @@ a.tm span {
 
 .td,
 table .td {
-  color: #888888; }
+  color: #616161; }
 
 .tc {
   text-align: center; }
