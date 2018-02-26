@@ -11,9 +11,12 @@ const Newsletter = require('../../src/components/newsletter');
 const generateNewsletter = function(req, callback) {
   const saveNewsletter = sanitize(req.body.save);
 	const links = sanitize(req.body.links);
+  let week = sanitize(req.query.week);
+	let year = sanitize(req.query.year);
+	
 	const today = new Date(Date.now());
-	const week = process.env.week || calendar.getWeek(today);
-	const year = process.env.year || today.getFullYear();
+	week = week || calendar.getWeek(today) - 1;
+	year = year || today.getFullYear();
 
 	const newsletter = new Newsletter(week, year, links);
 
