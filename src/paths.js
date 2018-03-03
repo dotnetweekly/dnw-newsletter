@@ -4,9 +4,9 @@ const config = require('../config');
 
 function getPaths() {
 	return [
-		[ '$DOMAIN_CLIENT', config.clientDomain ],
-		[ '$DOMAIN_NEWSLETTER', config.newsletterDomain ],
-		[ '$DOMAIN_API', config.api.domain ]
+		['{{{DOMAIN_CLIENT}}}', config.clientDomain],
+		['{{{DOMAIN_NEWSLETTER}}}', config.newsletterDomain],
+		['{{DOMAIN_API}}', config.api.domain]
 	];
 }
 
