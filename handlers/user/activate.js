@@ -15,6 +15,6 @@ const activate = function(req, callback) {
 	const emailHtml = email.generate();
 
 	callback.onSuccess(emailHtml);
-}
+};
 
 module.exports = activate;

@@ -8,7 +8,7 @@ class NewsletterHeader {
 	}
 
 	generate() {
-		let header = fs.readFileSync(path.resolve(__dirname, '../../template/newsletter-header.html'), 'utf-8');
+		let header = fs.readFileSync(path.resolve(__dirname, '../../template/newsletterHeader.html'), 'utf-8');
 		header = header.replace(/(\${week})/gim, this.week);
 		header = header.replace(/(\${year})/gim, this.year);
 		return header;
