@@ -27,7 +27,7 @@ class Generator {
 		}
 
 		newsletterHtml = this.main;
-		newsletterHtml = newsletterHtml.replace('{{ STYLE }}', this.styles);
+		// newsletterHtml = newsletterHtml.replace('{{ STYLE }}', this.styles);
 		newsletterHtml = newsletterHtml.replace('{{ BODY }}', bodyHtml);
 		newsletterHtml = replaceColors(newsletterHtml);
 		newsletterHtml = replacePaths(newsletterHtml);
