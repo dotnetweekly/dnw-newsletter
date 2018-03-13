@@ -1397,3 +1397,7 @@ html {
 .no-b-pm {
   padding-bottom: 0 !important;
   margin-bottom: 0 !important; }
+
+.linkCategoryHeader > tbody > tr > .first.last,
+.linkHeader > tbody > tr > .first.last {
+  padding-top: 8px !important; }
