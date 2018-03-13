@@ -62,7 +62,8 @@ const generateNewsletter = function(req, callback) {
 					});
 			});
 		})
-		.catch(() => {
+		.catch(error => {
+			console.log(error);
 			callback.onSuccess('');
 		});
 };

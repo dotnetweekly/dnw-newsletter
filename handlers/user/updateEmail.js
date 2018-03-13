@@ -17,7 +17,8 @@ const activate = function(req, callback) {
 		.then(inlinedHtml => {
 			callback.onSuccess(inlinedHtml);
 		})
-		.catch(() => {
+		.catch(error => {
+			console.log(error);
 			callback.onSuccess('');
 		});
 };

@@ -20,7 +20,8 @@ const emailTmplModule = function(req, callback) {
 		.then(inlinedHtml => {
 			callback.onSuccess(inlinedHtml);
 		})
-		.catch(() => {
+		.catch(err => {
+			console.log(err);
 			callback.onSuccess('');
 		});
 };
