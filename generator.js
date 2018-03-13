@@ -5,7 +5,8 @@ inky(
 		src: 'generator/**/*.html',
 		dest: 'template'
 	},
-	function() {
+	function(file) {
+		console.log(file);
 		console.log('Done parsing.');
 	}
 );

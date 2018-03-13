@@ -10,22 +10,17 @@ const getWeek = function(dateValue) {
 	return 1 + Math.ceil((firstThursday - target) / 604800000);
 };
 
-const getDateRangeOfWeek = function(week, year) {
-	let date = new Date(year, 0, 1);
-  date.setHours(0,0,0,0);
-  date.setDate(date.getDate() +(week * 7));
-
-  let fromDate = new Date(date.setDate(date.getDate() - 7));
-  fromDate.setHours(0,0,0,0);
-
-  let toDate = new Date(date.setDate(date.getDate() + 6));
-  toDate.setHours(0,0,0,0);
-
-	const dateRange = {
-		from: fromDate,
-		to: toDate
-  };
-  return dateRange;
+const getUtcNow = function() {
+	const now = new Date(Date.now());
+	return new Date(
+		now.getUTCFullYear(),
+		now.getUTCMonth(),
+		now.getUTCDate(),
+		now.getUTCHours(),
+		now.getUTCMinutes(),
+		now.getUTCSeconds(),
+		now.getUTCMilliseconds()
+	);
 };
 
-module.exports = { getWeek, getDateRangeOfWeek };
+module.exports = { getWeek, getUtcNow };
