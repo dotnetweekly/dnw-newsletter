@@ -34,7 +34,7 @@ app.use('/api', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-	console.log('Not Found');
+	console.log(req.originalUrl, 'Not Found');
 	const err = new Error('Not Found');
 	err.status = 404;
 	next(err);
