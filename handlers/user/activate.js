@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs-extra');
 const sanitize = require('mongo-sanitize');
+const Inky = require('inky').Inky;
 
 const cssHelper = require('../../helpers/css.helper');
 const config = require('../../config');
@@ -14,8 +15,11 @@ const activate = function(req, callback) {
 	const email = new ActivateAccount(token, password);
 
 	const emailHtml = email.generate();
+	const i = new Inky({});
+	const convertedHtml = i.releaseTheKraken(emailHtml);
+
 	cssHelper
-		.inlineCssInHtml(emailHtml)
+		.inlineCssInHtml(convertedHtml)
 		.then(inlinedHtml => {
 			callback.onSuccess(inlinedHtml);
 		})

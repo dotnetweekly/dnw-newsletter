@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs-extra');
 const sanitize = require('mongo-sanitize');
 const GitHub = require('github-api');
+const Inky = require('inky').Inky;
 
 const cssHelper = require('../../helpers/css.helper');
 const config = require('../../config');
@@ -15,8 +16,11 @@ const emailTmplModule = function(req, callback) {
 
 	const emailTmpl = new EmailTmpl(header, actionName, actionUrl, content);
 	const emailHtml = emailTmpl.generate();
+	const i = new Inky({});
+	const convertedHtml = i.releaseTheKraken(emailHtml);
+
 	cssHelper
-		.inlineCssInHtml(emailHtml)
+		.inlineCssInHtml(convertedHtml)
 		.then(inlinedHtml => {
 			callback.onSuccess(inlinedHtml);
 		})

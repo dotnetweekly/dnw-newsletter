@@ -2,6 +2,7 @@ const Header = require('./header');
 const FooterUnsubscribe = require('./footerUnsubscribe');
 const Link = require('./link');
 const LinkCategory = require('./linkCategory');
+const LinkContainer = require('./linkContainer');
 const NewsletterHeader = require('./newsletterHeader');
 const AdPremium = require('./adPremium');
 const AdSponsored = require('./adSponsored');
@@ -41,7 +42,7 @@ class Newsletter {
 	}
 
 	generate() {
-		const linkBlocks = [];
+		const linkContainers = [];
 		const { week, year } = this;
 
 		if (!this.links) {
@@ -53,13 +54,15 @@ class Newsletter {
 				return link.category === categories[i].slug;
 			});
 			if (catLinks.length > 0) {
-				linkBlocks.push(new LinkCategory(categories[i].name, categories[i].slug));
+				linkContainers.push(new LinkCategory(categories[i].name, categories[i].slug));
 			} else {
 				continue;
 			}
+			const linkBlocks = [];
 			for (var j = 0; j < catLinks.length; j++) {
 				linkBlocks.push(new Link(catLinks[j], this.week, this.year));
 			}
+			linkContainers.push(new LinkContainer(linkBlocks));
 		}
 
 		// for (var i = 0; i < this.links.length; i++) {
@@ -78,7 +81,7 @@ class Newsletter {
 			} */
 		// }
 		return generator.generate(
-			[new Header(), new NewsletterHeader(week, year)].concat(linkBlocks).concat([new FooterUnsubscribe()])
+			[new NewsletterHeader(week, year), new Header()].concat(linkContainers).concat([new FooterUnsubscribe()])
 		);
 	}
 }

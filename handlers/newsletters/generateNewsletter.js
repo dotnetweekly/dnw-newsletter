@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs-extra');
 const sanitize = require('mongo-sanitize');
 const GitHub = require('github-api');
+const Inky = require('inky').Inky;
 
 const cssHelper = require('../../helpers/css.helper');
 const calendar = require('../../helpers/calendar.helper');
@@ -21,9 +22,11 @@ const generateNewsletter = function(req, callback) {
 	const newsletter = new Newsletter(week, year, links);
 
 	const newsletterHtml = newsletter.generate();
+	const i = new Inky({});
+	const convertedHtml = i.releaseTheKraken(newsletterHtml);
 
 	cssHelper
-		.inlineCssInHtml(newsletterHtml)
+		.inlineCssInHtml(convertedHtml)
 		.then(inlinedHtml => {
 			if (!saveNewsletter) {
 				callback.onSuccess(inlinedHtml);

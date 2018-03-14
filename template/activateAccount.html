@@ -1,19 +1,12 @@
-<table align="center" class="container"><tbody><tr><td>
-<table class="row"><tbody><tr>
-  <th class="small-12 large-12 columns first last"><table><tr><th>
-    <table class="spacer"><tbody><tr><td height="16px" style="font-size:16px;line-height:16px;">&#xA0;</td></tr></tbody></table> 
-    
-    <h1 class="text-center">Activate your account</h1>
-    
-    <table class="spacer"><tbody><tr><td height="16px" style="font-size:16px;line-height:16px;">&#xA0;</td></tr></tbody></table> 
-
-    <p class="text-center">Please click on the button to activate your account</p>
-    <p class="text-center">${AUTOGEN_PASS}</p>
-    <p>
-      <table class="button large expand"><tr><td><table><tr><td><center data-parsed=""><a href="{{{DOMAIN_CLIENT}}}activate/${ACTIVATE_TOKEN}" align="center" class="float-center">Activate</a></center></td></tr></table></td>
-<td class="expander"></td></tr></table>
-    </p>
-  </th>
-<th class="expander"></th></tr></table></th>
-</tr></tbody></table>
-</td></tr></tbody></table>
+<container class="content">
+  <row>
+    <columns>
+      <h1 class="text-center">Activate your account</h1>
+      <p class="text-center">Please click on the button to activate your account</p>
+      <p class="text-center">${AUTOGEN_PASS}</p>
+      <p>
+        <button class="large expand" href="{{{DOMAIN_CLIENT}}}activate/${ACTIVATE_TOKEN}">Activate</button>
+      </p>
+    </columns>
+  </row>
+</container>
