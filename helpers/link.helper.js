@@ -34,6 +34,13 @@ const linkHelper = {
         domain = splitArr[arrLen - 3] + "." + domain;
       }
     }
+
+    var domainParts = domain.split(".");
+    if (domainParts.length > 1) {
+      domainParts.pop();
+      domain = domainParts.join(".");
+    }
+
     return domain;
   }
 };

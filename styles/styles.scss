@@ -3,233 +3,239 @@
 html,
 .body,
 body {
-	background: #f3f3f3;
+  background: #f3f3f3;
 }
 
 .body-drip {
-	border-top: 8px solid $color_highlight;
-	width: 100%;
+  border-top: 8px solid $color_highlight;
+  width: 100%;
 }
 
 body > .body {
-	table-layout: fixed;
-	padding: 0px;
-	font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-	font-weight: 600;
-	line-height: 1.55em;
-	mso-table-lspace: 0pt;
-	mso-table-rspace: 0pt;
-	border-collapse: collapse;
-	max-width: 600px;
-	height: 100% !important;
-	margin: 0 auto;
+  table-layout: fixed;
+  padding: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.55em;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+  border-collapse: collapse;
+  max-width: 600px;
+  height: 100% !important;
+  margin: 0 auto;
 }
 
 .body center > table {
-	width: 100%;
+  width: 100%;
 }
 
 .spacer {
-	background-color: inherit !important;
+  background-color: inherit !important;
 }
 
 h5 {
-	font-size: 24px;
-	font-weight: normal;
-	margin-top: 20px;
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 20px;
 }
 
 h5,
 h6 {
-	margin-bottom: 0;
-	margin-top: 0;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 img {
-	clear: both;
-	display: block;
-	max-width: 100%;
-	outline: none;
-	text-decoration: none;
-	width: auto;
+  clear: both;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  text-decoration: none;
+  width: auto;
 }
 
 table {
-	mso-table-lspace: 0pt;
-	mso-table-rspace: 0pt;
-	border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+  border-collapse: collapse;
 }
 
 a {
-	text-decoration: none;
-	color: $color_link;
+  text-decoration: none;
+  color: $color_link;
 }
 
 .full-width {
-	width: 100%;
+  width: 100%;
 }
 
 small {
-	font-weight: normal;
+  font-weight: normal;
 }
 
 p {
-	text-align: left;
-	font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-	font-weight: 500;
-	line-height: 1.55em;
-	mso-table-lspace: 0pt;
-	mso-table-rspace: 0pt;
-	border-collapse: collapse;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.55em;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+  border-collapse: collapse;
 }
 
 .link {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 td {
-	font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-	font-weight: 600;
-	line-height: 1.55em;
-	mso-table-lspace: 0pt;
-	padding: 0px 15px;
-	mso-table-rspace: 0pt;
-	border-collapse: collapse;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.55em;
+  mso-table-lspace: 0pt;
+  padding: 0px 15px;
+  mso-table-rspace: 0pt;
+  border-collapse: collapse;
 }
 
 body > .body,
 p,
 td {
-	font-size: 17px;
+  font-size: 17px;
 }
 
 .text-right {
-	text-align: right;
+  text-align: right;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .linkCategory {
-	margin-top: 10px;
-	margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .newsletterHeader {
-	margin: 0;
-	font-size: 14px;
+  margin: 0;
+  font-size: 14px;
 }
 
 .linkCategoryContainer {
-	background-color: #ffffff;
-	border-bottom: 8px solid $color_link;
+  background-color: #ffffff;
+  border-bottom: 8px solid $color_link;
 }
 
 .linksContainer,
 .content {
-	background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .footer {
-	margin-top: 30px;
-	margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .email-logo {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .footer > tbody > tr > td {
-	padding: 0 !important;
+  padding: 0 !important;
 }
 
 .footerSocial {
-	width: 60px;
+  width: 60px;
 }
 
 .footerSocial table {
-	width: 100%;
+  width: 100%;
+}
+
+.footerOption {
+  color: #bababa;
+  font-style: italic;
+  font-size: 11px;
 }
 
 .linkTags {
-	font-style: italic;
-	color: #898989;
+  font-style: italic;
+  color: #898989;
 }
 
 .button table {
-	width: 100%;
+  width: 100%;
 }
 
 h1 {
-	color: inherit;
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 34px;
-	font-weight: normal;
-	line-height: 130%;
-	margin: 0;
-	margin-bottom: 10px;
-	padding-bottom: 0;
-	padding-left: 0;
-	padding-right: 0;
-	padding-top: 0;
-	text-align: center;
-	word-wrap: normal;
+  color: inherit;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 34px;
+  font-weight: normal;
+  line-height: 130%;
+  margin: 0;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  text-align: center;
+  word-wrap: normal;
 }
 
 .button {
-	border-collapse: collapse;
-	border-spacing: 0;
-	margin: 0 0 16px 0;
-	padding-bottom: 0;
-	padding-left: 0;
-	padding-right: 0;
-	padding-top: 0;
-	text-align: left;
-	vertical-align: top;
-	width: 100% !important;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 16px 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  text-align: left;
+  vertical-align: top;
+  width: 100% !important;
 }
 
 .button td {
-	-moz-hyphens: auto;
-	-webkit-hyphens: auto;
-	Margin: 0;
-	background: #3273dc;
-	border: 2px solid #3273dc;
-	border-collapse: collapse !important;
-	color: #fefefe;
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	font-weight: normal;
-	hyphens: auto;
-	line-height: 130%;
-	margin: 0;
-	padding-bottom: 0;
-	padding-left: 0;
-	padding-right: 0;
-	padding-top: 0;
-	text-align: left;
-	vertical-align: top;
-	word-wrap: break-word;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  margin: 0;
+  background: #3273dc;
+  border: 2px solid #3273dc;
+  border-collapse: collapse !important;
+  color: #fefefe;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  hyphens: auto;
+  line-height: 130%;
+  margin: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
 }
 
 .button a {
-	border: 0 solid #3273dc;
-	border-radius: 3px;
-	color: #fefefe;
-	display: inline-block;
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 20px;
-	font-weight: bold;
-	line-height: 130%;
-	padding: 10px 20px 10px 20px;
-	padding-left: 0;
-	padding-right: 0;
-	text-align: center;
-	text-decoration: none;
-	width: 100%;
+  border: 0 solid #3273dc;
+  border-radius: 3px;
+  color: #fefefe;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 130%;
+  padding: 10px 20px 10px 20px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
 }
 
 .content > tbody > tr > td {
-	padding: 20px !important;
+  padding: 20px !important;
 }

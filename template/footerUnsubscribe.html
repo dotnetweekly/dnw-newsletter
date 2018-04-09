@@ -1,30 +1,26 @@
 <container class="footer">
-    <row class="footerOptions full-width">
-      <columns small="6" large="6">
-        <small>
-          <a href="{{{DOMAIN_CLIENT}}}" class="text-left">
-            <span>Current Week</span>
+  <row class="footerOptions full-width">
+    <columns small="6" large="6">
+      <small>
+        <a class="footerOption" href="{{usubscribe_key}}">
+          <span>Unsubscribe</span>
+        </a>
+      </small>
+    </columns>
+    <columns small="3" large="1" class="text-right footerSocial">
+      <row class="full-width text-right">
+        <columns small="6" large="6">
+          <a href="https://www.facebook.com/DotNetWeekly/">
+            <img src="{{{DOMAIN_NEWSLETTER}}}images/social-facebook.png" width="24" height="24" alt="">
           </a>
-          <span> - </span>
-          <a href="{{{USER_UNSUBSCRIBE}}}">
-            <span>Unsubscribe</span>
+        </columns>
+        <columns small="6" large="6">
+          <a href="https://twitter.com/dotnetweekly">
+            <img src="{{{DOMAIN_NEWSLETTER}}}images/social-twitter.png" width="24" height="24" alt="">
           </a>
-        </small>
-      </columns>
-      <columns small="3" large="1" class="text-right footerSocial">
-        <row class="full-width text-right">
-          <columns small="6" large="6">
-            <a href="https://www.facebook.com/DotNetWeekly/">
-              <img src="{{{DOMAIN_NEWSLETTER}}}images/social-facebook.png" width="24" height="24" alt="">
-            </a>
-          </columns>
-          <columns small="6" large="6">
-            <a href="https://twitter.com/dotnetweekly">
-              <img src="{{{DOMAIN_NEWSLETTER}}}images/social-twitter.png" width="24" height="24" alt="">
-            </a>
-          </columns>
-        </row>
-      </columns>
-    </row>
-  </container>
-  <spacer size="16"></spacer>
+        </columns>
+      </row>
+    </columns>
+  </row>
+</container>
+<spacer size="16"></spacer>

@@ -123,6 +123,11 @@ td {
 .footerSocial table {
   width: 100%; }
 
+.footerOption {
+  color: #bababa;
+  font-style: italic;
+  font-size: 11px; }
+
 .linkTags {
   font-style: italic;
   color: #898989; }
@@ -160,7 +165,7 @@ h1 {
 .button td {
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
-  Margin: 0;
+  margin: 0;
   background: #3273dc;
   border: 2px solid #3273dc;
   border-collapse: collapse !important;
