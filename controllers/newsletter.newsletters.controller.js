@@ -17,7 +17,7 @@ class NewslettersController extends AdminBaseController {
   }
 
   currentNewsletter(req, res, next) {
-    const response = this._responseManager.getResponseHandler(req, res);
+    const response = this._responseManager.getResponseHandler(req, res, true);
     if (response) {
       this._newsletterHandler.currentNewsletter(req, response);
     }

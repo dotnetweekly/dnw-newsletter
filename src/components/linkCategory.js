@@ -30,10 +30,17 @@ class Link {
 			case 'videos':
 				imageUrl += 'video.png';
 				break;
+			case 'sponsored':
+				imageUrl += 'sponsored.png';
+				break;
+			case 'job-listing':
+				imageUrl += 'job-listing.png';
+				break;
 		}
 
 		linkTmpl = linkTmpl.replace(/(\${linkCategoryImage})/gim, imageUrl);
 		linkTmpl = linkTmpl.replace(/(\${linkCategoryName})/gim, this.name);
+		linkTmpl = linkTmpl.replace(/(\${linkCategorySlug})/gim, this.slug);
 		return linkTmpl;
 	}
 }

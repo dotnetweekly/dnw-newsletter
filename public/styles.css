@@ -18,7 +18,8 @@ body > .body {
   border-collapse: collapse;
   max-width: 600px;
   height: 100% !important;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%; }
 
 .body center > table {
   width: 100%; }
@@ -101,7 +102,8 @@ td {
 
 .linkCategoryContainer {
   background-color: #ffffff;
-  border-bottom: 8px solid #3273dc; }
+  border-bottom: 8px solid #3273dc;
+  width: 100%; }
 
 .linksContainer,
 .content {
