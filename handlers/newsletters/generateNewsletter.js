@@ -5,7 +5,7 @@ const GitHub = require('github-api');
 const Inky = require('inky').Inky;
 
 const cssHelper = require('../../helpers/css.helper');
-const calendar = require('../../helpers/calendar.helper');
+const calendar = require('weekly-calendar-helper');
 const config = require('../../config');
 const Newsletter = require('../../src/components/newsletter');
 
@@ -15,8 +15,8 @@ const generateNewsletter = function(req, callback) {
 	let week = sanitize(req.query.week);
 	let year = sanitize(req.query.year);
 
-	const today = calendar.getUtcNow();
-	week = week || calendar.getWeek(today) - 1;
+	const today = calendar.baseHelper.getUtcNow();
+	week = week || calendar.weekHelper.getWeekNumber(today) - 1;
 	year = year || today.getFullYear();
 
 	const newsletter = new Newsletter(week, year, links);
