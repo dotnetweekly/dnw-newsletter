@@ -25,7 +25,7 @@
     "inline-css": "^2.3.1",
     "jsonwebtoken": "^8.2.1",
     "mongo-sanitize": "^1.0.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "weekly-calendar-helper": "^0.0.5"
   },
   "devDependencies": {
